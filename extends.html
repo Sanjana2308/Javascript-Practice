@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Inheritance</h2>
+    <p id = "demo"></p>
+
+    <script>
+        class Mall{
+            constructor (shopName){
+                this.shopName = shopName;
+            }
+            shopIsPresent(){
+                return this.shopName + " is present in the ";
+            }
+        }
+
+        class Shop extends Mall{
+
+            constructor(name, mallName){
+                super(name);
+                this.mallName = mallName;
+            }
+
+            showShop(){
+                return this.shopIsPresent() + this.mallName;
+            }
+        }
+
+        let newMall = new Shop("Domino", "Select City Walk Mall");
+
+        // inner HTML is used thus the output is shown on the screen
+        document.getElementById("demo").innerHTML = newMall.showShop();   
+    </script>
+</body>
+</html>

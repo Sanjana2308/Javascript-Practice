@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--SElf closing tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h1{
+            color:crimson;
+        }
+
+        .title{
+            color: orange;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the app</h1>
+    <!-- id can be used only once in the file -->
+    <h2 id = "sub-heading">Welcome to the app</h2>
+    <!-- Multiple items can get the same class -->
+    <h3 class = "title">Welcome to the app 1</h3>
+    <h4 class = "title">Welcome to the app 2</h4>
+    <h5 class = "title">Welcome to the app 3</h5>
+    <h6>Welcome to the app</h6>
+
+    <button onclick="clicked()">Click</button>
+
+    <br  />
+    </br  />
+
+    <h3>Check for driving test</h3>
+    <input type = "text" placeholder="Enter your age" value = "22"/>
+    <!-- Callback Function - attached to the event listeners-->
+    <button onclick = "checkForAge()">Check</button>
+
+
+
+    <!-- To create boilerplate code -->
+    <!-- !<tab> -->
+    <!-- <script src = "fundamentals.js"></script>
+    <script src = "basic-loops.js"></script> -->
+    <script>
+        //Change data
+    var h2 = document.getElementById("sub-heading");
+    console.log(h2.innerText);
+    h2.innerText = "This is super cool"
+
+    //get data
+    var titles = document.getElementsByClassName("title");
+    console.log(titles);
+
+    for (title in titles){
+        console.log(title.innerText);
+    }
+    
+    //Task 1 - Print how many times they have clicked on the screen
+    function clicked(){
+        clickedCount++;
+        document.getElementById("clicked-times").innerText = `You clicked the button ${clickedCount} times`;
+    }
+
+    function checkForAge(){
+      const age = document.getElementById("age").value;
+      console.log("Checking...",age);
+      document.getElementById("result").innerText = 
+      age >=18 ? "You are eligible for driving": "You are not eligible for driving"
+    }
+
+
+
+    </script>
+  </body>
+</html>

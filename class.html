@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Car{
+            constructor(name, engine, wheels, doors){
+                this.name = name
+                this.engine = engine
+                this.wheels = wheels
+                this.doors = doors
+            }
+
+            horn(){
+                return `${this.name} says Vroom Vroom 🚗!!`
+            }
+        }
+
+        ferrari = new Car("Ferrari", "v8", 4, 2);
+        alto = new Car("Alto", "v4", 4, 4); // Object
+        console.log(ferrari);
+        console.log(alto);
+        // Car is a function here it is not a class. In javascript we don't have classes function are only used as classes 
+        console.log(typeof Car, typeof ferrari, typeof alto);
+    </script>
+</body>
+</html>

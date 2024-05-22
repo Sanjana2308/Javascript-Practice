@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fun page</h1>
+
+    <button onclick = "clicked()">Click me</button>
+    <button onclick="closed()">Close ❌</button>
+    
+    <script>
+        function clicked(){
+            let c = 5+4;
+
+            // Alert used for developers mainly not for the users
+            // Disadvantage: It can stop the page from rendering that is stops the work of the browser until we press OK
+            // Advantage: When we want to stop/ annoy the user and we don't want the user to quit
+            // In output gives only one choice OK
+            alert(`The sum is ${c}`);
+        }
+
+        function closed(){
+            // Instead of alert we can use confirm()
+            // Gives two choice OK and Cancel
+            // Gives a boolean value
+            let result = confirm("Are you sure you want to close?");
+            console.log("The result is ", result);
+        }
+
+
+        function sum(a, b){
+            return a + b;
+        }
+
+        // Syntax Sugar
+        let sum1 = (a, b) => a + b;
+        console.log(sum1(4, 4));
+            function getPrompt(){
+            name = prompt("Tell me your name");
+            console.log(name);
+        }
+
+        // this - keyword
+        // Arrow function
+        let getPrompt1 = () => {
+            let name = prompt("Tell me your name");
+            console.log(name);
+        }
+    </script>
+</body>
+</html>
